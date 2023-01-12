@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins">
+    
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Merienda">
+
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Short Stack">
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/favicon_io/apple-touch-icon.png"
+    />
+
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <link rel="stylesheet" href="../css/common_style.css" />
+    <link rel="stylesheet" href="../css/edit_addMovie.css" />
+    <link rel="stylesheet" href="../assets/icons/themify-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add product</title>
+    <style>
+        .flex-row{
+          display: flex;
+          gap: 7px;
+        }
+    
+        .flex-col{
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+    
+        .space-between {
+          justify-content: space-between;
+        }
+    
+        header {
+          background-color: rgb(163, 69, 69);
+          font-weight: 600;
+          padding: 10px 25px 10px 25px;
+    
+        }
+    
+        header * {
+          color: white;
+        }
+    
+        .header-title {font-size: 22px;}
+    
+        body * {
+          font-family: "Poppins", sans-serif;
+          font-size: 13px;
+        }
+        
+        body {
+          margin: 0px;
+        }
+    
+        .align-center {align-items: center;}
+    
+        .main-body {margin-top: 30px;}
+        
+        .main-body, #login-form{
+          align-items: center;
+          justify-items: center;
+        }
+
+        .page-title {
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 40px;
+          font-weight:500;
+        }
+    
+        .btn {
+          border: solid 1.5px transparent;
+          border-radius: 3px;
+          align-items: center;
+          justify-content: center;
+          height: fit-content;
+        }
+    
+        .btn:hover{
+          cursor: pointer;
+        }
+    
+        .btn:active{
+          opacity: 85%;
+        }
+    
+        .btn-white-text {
+          border-color: white;
+          color: white;
+        }
+    
+        .btn-transparent{
+          background-color: transparent;
+        }
+    
+        .btn-red {
+          background-color: rgb(163, 69, 69);
+          color: white;
+        }
+        
+        @media screen and (max-width: 40em) { 
+          body * {font-size: 12px;}
+          .title {font-size: 25px;}
+          .subtitle {font-size: 20px;}
+          .header-title {font-size: 17px;}
+        }
+      </style>
+</head>
+<body class="body">
+    <header></header>
+    <main class="body_region align_items_center">
+        <form class="flex_col form_whole" id="add_film_form">
+            <div class="flex_col form_input">
+                <div class="input_title_area align_items_center">
+                    <input  class="input_box input_title" type="text" id="title" name="title" value="Movie title" placeholder="Movie title"/>
+                    <span class="require_symbol">*</span>
+                </div>
+                <div class="form_body flex_row">
+                    <div class="flex_col form_col" id="left_col">
+                        <div>
+                            <label for="originalTitle">Original Title <span class="require_symbol">*</span></label>
+                            <input required class="input_box" type="text" id="originalTitle" name="originalTitle" placeholder="Original title"/>
+                        </div>
+
+                        <div>
+                            <label for="description">Description <span class="require_symbol">*</span></label>
+                            <textarea required class="myTextarea"  id="description" name="description" style="height: 8.6rem;" placeholder="Desciption"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="genres">Genres</label>
+                            <input type="hidden" class="flex_row" id="genres" name="genres"/>
+                            <div required class="flex_row" id="genres_select"></div>
+                        </div>
+
+                        <div>
+                            <label for="href">Href To Movie <span class="require_symbol">*</span></label>
+                            <input required class="input_box" type="url" id="href" name="href" placeholder="URL"/>
+                        </div>
+
+                        <div>
+                            <label for="thumbnail">Thumbnail <span class="require_symbol">*</span></label>
+                            <input required class="input_box" type="url" id="thumbnail" name="thumbnail" placeholder="URL"/>
+                        </div>
+
+                        <div>
+                            <label for="thumbnail">Thumbnail Portrait</label>
+                            <input class="input_box" type="url" id="thumbnail_portrait" name="thumbnail_portrait" placeholder="URL"/>
+                        </div>
+
+                        <div>
+                            <label for="thumbnail">Thumbnail Landscape</label>
+                            <input class="input_box" type="url" id="thumbnail_landscape" name="thumbnail_landscape" placeholder="URL"/>
+                        </div>
+                    </div>
+
+                    <div class="flex_col form_col" id="right_col">
+                        <div>
+                            <label for="duration">Duration</label>
+                            <input class="input_box" type="number" id="duration" name="duration" placeholder="Duration in minutes" min="0"/>
+                        </div>    
+                        
+                        <div>
+                            <label for="episodes">Episodes</label>
+                            <input class="input_box" type="number" id="episodes" name="episodes" placeholder="Epsisodes" min="0"/>
+                        </div> 
+
+                        <div>
+                            <label for="rating">Rating</label>
+                            <input class="input_box" type="number" step="any" id="rating" name="rating" placeholder="Rating" min="0"/>
+                        </div>   
+
+                        <div>
+                            <label for="rating">Age Restriction</label>
+                            <select required class="input_box" id="adult" name="adult" form="add_film_form">
+                                <option id="adult_false" value="false">False</option>
+                                <option id="adult_true" value="true">True</option>
+                            </select>
+                        </div>  
+
+                        <div>
+                            <label for="country">Country <span class="require_symbol">*</span></label>
+                            <select required class="input_box" id="country" name="country" form="add_film_form">
+                                <option id="no_country_option" value="">-- Select a country --</option>
+                            </select>
+                        </div>     
+
+                        <div>
+                            <label for="date">Publication Date</label>
+                            <input class="input_box" type="date" id="date" name="date"/>
+                        </div>
+
+                        <div>
+                            <label for="tags">Tags</label>
+                            <input class="input_box" type="text" id="tags" name="tags" placeholder="Tags separated by comma. Ex: #A, #b, #c"/>
+                        </div>
+
+                        <div>
+                            <label for="director">Directors</label>
+                            <input class="input_box" type="text" id="director" name="director" placeholder="Names separated by comma. Ex: Jimmy, Alex"/>
+                        </div>   
+
+                        <div>
+                            <div>
+                                <label for="actor">Actors</label>
+                                <button class="actor_btn" id="add_actor_btn">+</button>
+                                <button class="actor_btn" id="remove_actor_btn">-</button>
+                            </div>
+                            <input hidden class="input_box" type="text" id="actors" name="actors"/>
+                            <div class="flex_row">
+                                <table id="actors_table">
+                                    <thead>
+                                        <th>Name</th>
+                                        <th>Image</th>
+                                        <th>Character</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="actor_info" id="actor1">
+                                            <td><input class="input_box" type="text" id="actor1_name"placeholder="Name"/></td>
+                                            <td><input class="input_box" type="text" id="actor1_img"placeholder="Image"/></td>
+                                            <td><input class="input_box" type="text" id="actor1_cha"placeholder="Character"/> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input class="red_theme_button" type="submit" value="Submit" id="submit_btn">
+        </form>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="../js/components/header.js"></script>  
+    <script type="text/javascript" src="../js/components/customHeaderFooter/functions.js"></script>
+    <script>
+    fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=2a51e561a490f304053dd6d7c06dbe16&language=en-US")
+    .then(response => response.json())
+    .then(json => {
+        var html = ''
+        var length = json.genres.length
+        var per_col = Math.ceil(length/3)
+        for (let i=0; i < length; i++) {
+            var genre_id = json.genres[i].id
+            var genre_name = json.genres[i].name
+            temp = '<div class="flex_row align_items_center checkbox"><input type="checkbox" id="'+genre_id+'" value="'+genre_name+'">'+genre_name+'</div>'
+            if (i%per_col==0) {
+            html += '<div class="flex_col">'+temp
+            }
+            else if (i%per_col==(per_col-1)) {
+            html += temp+'</div>'
+            }
+            else html+=temp
+        }
+        document.querySelector("#genres_select").innerHTML = html
+    })
+
+    
+    function change_title() {
+        var title = document.getElementById("title");
+        var edit = document.getElementById("edit_title");
+        if (title.disabled) {
+            title.disabled = false;
+            edit.innerHTML = 'Finish';
+        }
+        else {
+            title.disabled = true;
+            edit_title.innerHTML = 'Edit';
+        }
+    }
+
+    function add_row() {
+        var tbodyRef = document.getElementById('actors_table').getElementsByTagName('tbody')[0];
+        var newRow = tbodyRef.insertRow(-1); //append row to the end
+        let i = document.querySelectorAll(".actor_info").length + 1 //find index to make id
+        newRow.setAttribute("class","actor_info")
+        newRow.setAttribute("id","actor"+i)
+        newRow.innerHTML =
+        `
+            <td><input class="input_box" type="text" id="actor${i}_name" placeholder="Name"/></td>
+            <td><input class="input_box" type="text" id="actor${i}_img" placeholder="Image"/></td>
+            <td><input class="input_box" type="text" id="actor${i}_cha" placeholder="Character"/></td>
+        `
+    }
+
+    document.querySelector("#add_actor_btn").onclick = (e) => {
+        e.preventDefault()
+        add_row()
+    }
+    
+    document.querySelector("#remove_actor_btn").onclick = (e) => {
+        e.preventDefault()
+        let i = document.querySelectorAll(".actor_info").length
+        if (i>1) {
+            let id = "actor" + i
+            document.getElementById(id).remove()
+        }
+    }
+
+    function generalize_genres() {
+        let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+        let selected = []
+        let total = checkboxes.length
+        for (let i = 0; i < total; i++) {
+                selected.push(checkboxes[i].value)
+        }
+        document.getElementById("genres").value = JSON.stringify(selected)
+    }
+
+    function generalize_director() {
+        let values = document.querySelector("#director").value.split(/[,]+/)
+        // let total = values.length
+        // let directors = []
+        // for (let i = 0; i < total; i++) {
+        //     let name_parts = values[i].split(/[ ]+/).filter(Boolean);
+        //     console.log(name_parts)
+        //     let final_name = ""
+        //     for (let j=0; j<name_parts.length; j++) {
+        //         final_name += name_parts + " "
+        //     }
+        //     final_name = final_name.slice(0,-1)
+        //     directors.push(final_name)
+        // }
+        document.getElementById("director").value = JSON.stringify(values)
+    }
+
+
+    function generalize_actors() {
+        let actors = document.querySelectorAll('.actor_info')
+        let actors_info = []
+        for (let i=0; i<actors.length; i++) {
+            let info = document.querySelectorAll(`#actor${i+1} input`)
+            if (info[0].value != "") {
+                let actor = {
+                    name: info[0].value,
+                    image: info[1].value,
+                    character: info[2].value
+                }
+                actors_info.push(JSON.stringify(actor))
+            }
+        }
+        document.getElementById("actors").value = actors_info
+    }
+    
+
+    add_film_form.onsubmit = async (e) => {
+        document.getElementById("title").disabled = false
+        try {
+        generalize_genres();
+        generalize_actors();
+        generalize_director();
+        generalize_tags();
+        }
+        catch(error) {
+            console.log(error)
+        }
+        e.preventDefault();
+
+        let data = JSON.stringify({
+            title: document.getElementById("title").value,
+            originalTitle: document.getElementById("originalTitle").value,
+            description: document.getElementById("description").value,
+            href: document.getElementById("href").value,
+            thumbnail: document.getElementById("thumbnail").value,
+            thumbnail_portrait: document.querySelector("#thumbnail_portrait").value,
+            thumbnail_landscape: document.querySelector("#thumbnail_landscape").value,
+            duration: document.getElementById("duration").value,
+            episodes: document.getElementById("episodes").value,
+            rating: document.getElementById("rating").value,
+            adult: document.getElementById("adult").value,
+            date: document.getElementById("date").value,
+            adult: document.getElementById("adult").value,
+            country: document.getElementById("country").value}
+        )
+
+        data = data.toString()
+        data = data.slice(0,-1)
+        data = data.concat(`,
+        "genres":${document.getElementById("genres").value},
+        "actors":[${document.getElementById("actors").value}],
+        "director": ${document.getElementById("director").value},
+        "tags": ${document.getElementById("tags").value}
+        }
+        `)
+        console.log(data)
+
+        try {
+        let response = await fetch('https://dramaholic.herokuapp.com/api/movies/', {
+        method: 'POST',
+        headers: {"Content-Type":"application/json"},
+        body: data
+        })
+        .then(response => {
+            console.log(response.status)
+            if(response.status==201) {
+            alert("Added movie successfully ")
+                location.reload();
+            }
+            else {
+            alert("Sorry, add movie failed")
+            }
+        })
+        } catch(error) {
+            console.log(error)
+        }
+    };
+    </script>
+
+</body>
+</html>

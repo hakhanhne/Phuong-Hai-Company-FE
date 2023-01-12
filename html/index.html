@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Phuong Hai</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Poppins">
+
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Merienda">
+
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Short Stack">
+
+  
+  
+  <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <style>
+    .right-header {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .flex-row{
+      display: flex;
+      gap: 7px;
+    }
+
+    .flex-col{
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    body * {
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+    }
+    
+    body {
+      margin: 0px;
+    }
+    
+    header {
+      background-color: rgb(163, 69, 69);
+      font-weight: 600;
+      padding: 10px 25px 10px 25px;
+    }
+
+    header * {
+      color: white;
+    }
+
+    .header-title {
+      font-family: 'Merienda';
+      font-size: 22px;
+    }
+
+    .title{
+      font-family: 'Short Stack';
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+      color: rgb(163, 69, 69);
+    }
+
+    
+    .subtitle {font-size: 25px;}
+
+    .main-body{
+      gap: 40px !important;
+      width: 90%;
+      align-self: center;
+    }
+
+    .main-body section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .space-around {
+      justify-content: space-around;
+    }
+
+    .justify-left {
+      justify-content: left;
+    }
+
+    .align-center {align-items: center;}
+
+    #search-area{
+      background-color: #febb02;
+      padding: 20px;
+      height: fit-content;
+    }
+
+    #search-area-content {gap: 18px;}
+
+    .label-input {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .btn {
+      border: solid 1.5px transparent;
+      border-radius: 3px;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+    }
+
+    .btn:hover{
+      cursor: pointer;
+    }
+
+    .btn:active{
+      opacity: 85%;
+    }
+
+    .btn-white-text {
+      border-color: white;
+      color: white;
+    }
+
+    .btn-transparent{
+      background-color: transparent;
+    }
+
+    .btn-red {
+      background-color: rgb(163, 69, 69);
+      color: white;
+    }
+
+    .table-w-border, .table-w-border tr, .table-w-border td, .table-w-border th {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    .table-no-border, .table-no-border tr, .table-no-border td, .table-no-border th {
+      border: none;
+    }
+
+    th {text-align: center;}
+
+    th, td {padding: 5px 3px;}
+
+    .text-center {
+      text-align: center;
+    }
+
+    #left-col {
+      width: 25%;
+    }
+
+    #right-col {
+      height: 500px;
+      max-width: 70%;
+    }
+
+    .section-colored {
+      background-color: rgb(248, 223, 223);
+      padding: 20px;
+    }
+
+    #table-rule td:first-child {
+      font-weight: 600;
+    }
+
+    #table-result td:first-child {
+     max-width: fit-content;
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     border: none;
+    }
+
+    #table-rule {
+      border-spacing: 10px 15px;
+    }
+
+    .bold{font-weight: 600;}
+
+    .util-title{
+      font-weight: 600;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .util-col {gap: 20px;}
+
+    .util-col div {gap: 7px;}
+
+    img:hover{opacity: .7;}
+
+    table thead {
+      background-color: rgb(163, 69, 69);
+      height: 40px;
+      color: white;
+    }
+
+    #table-result td{text-align: center;}
+
+    .util.flex-row, #utility-content {
+      flex-wrap: wrap;
+    }
+
+    .rounded-border{
+      border-radius: 5px;
+      border-color: transparent;
+    }
+
+    img {
+      border-radius: 5px;
+      border-color: transparent;
+    }
+
+    #explore-content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    table {
+      overflow-x: auto;
+    }
+    
+    .matched-util {color: rgb(219, 24, 24);}
+
+    #btn-select-util {
+      border: 1px solid;
+      font-size: inherit;
+      background-color: white;
+      padding: 2px;
+      border-color: rgb(133, 133, 133);
+    }
+
+    .originalPrice {
+      text-decoration: line-through;
+    }
+
+    #result-content {gap:5px}
+
+    .room-name {font-size:15px;}
+    @media screen and (max-width: 40em) { 
+      body * {font-size: 12px;}
+      .room-name {font-size:14px;}
+      .title {font-size: 25px;}
+      .subtitle {font-size: 20px;}
+      .header-title {font-size: 17px;}
+      .right-header{flex-direction: column-reverse; gap: 10px;}
+
+
+      #explore-content {
+        flex-direction: column;
+        gap: 7px
+      }
+
+      #left-col, #right-col {
+        width:100%;
+        max-width:100%
+      }
+      
+      #utility-content {
+        justify-content: left;
+      }
+    }
+    
+    
+    
+  </style>
+
+</head>
+<body class="flex-col">
+  <header></header>
+  <main class="flex-col main-body">
+    <section id="section-explore">
+      <div class="title">Explore</div>
+      <div class="space-between" id="explore-content">
+        <div class="flex-col" id="left-col">
+          <div class="rounded-border" id="search-area">
+            <div class="flex-col" id="search-area-content">
+              <div  class="bold subtitle" >Search</div>
+              <div class="flex-col" id="search-form">
+                <div class="label-input">
+                  <input type="text" id="search-keyword" name="search-by-keyword"/>
+                </div>
+                <div class="label-input">
+                  <label for="">Catogory</label>
+                  <select class="input_box" id="" name="">
+                      <option value="">All</option>
+                      <option id="single" value="single">Single</option>
+                      <option id="double" value="double">Double</option>
+                      <option id="family" value="family">Family</option>
+                      <option id="villa" value="villa">Villa</option>
+                  </select>
+                </div>
+
+                <div class="label-input">
+                  <label>Utilities</label>
+                  <button type="button" class="btn" id="btn-select-util" data-bs-toggle="modal" data-bs-target="#modal-select-util" >Select utilities</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-red" id="btn-search">Search</button>
+              <div id="search-msg"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-col" id="right-col">
+        </div>
+      </div>
+
+      <section id="section-result" class="flex-col" style="display: none;">
+        <div class="title">Search Result</div>
+        <div class="flex-col" id="result-content">
+        </div>
+      </section>
+    </section>
+
+    <section id="section-utility" class="flex-col">
+      <div class="title">Utilities</div>
+      <div class="section-colored rounded-border flex-row space-around" id="utility-content">
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal fade" id="modal-select-util" tabindex="-1" aria-labelledby="modal_select_util_label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal_select_util_label">Select Utilities</h5>
+          <button type="button" class="close btn btn-outline-dark btn-sm" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="gap: 1.5rem;">
+            <div id="utilities-select"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script type="module" src="../js/components/header.js"></script>  
+  <script type="text/javascript" src="../js/components/customHeaderFooter/functions.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="signinState.js"></script>
+  <script>
+    let hotelData = null
+    let selected_util = null
+    let room_result = null
+    let days = 0
+    let dataVer = -1
+    const product_area = document.querySelector("#right-col")
+    const btn_search = document.querySelector("#btn-search")
+    const search_msg = document.querySelector("#search-msg")
+    const section_result = document.querySelector("#section-result")
+    const result_content = document.querySelector("#result-content")
+    const btn_admin = document.querySelector("#btn-admin")
+    const address = document.querySelector("#address")
+
+
+    btn_search.addEventListener("click", () => {
+
+      displaySearchResult()
+    })
+
+
+    async function fetchData(url) {
+      try {
+        let res = await fetch(url);
+        const data = await res.json();
+        return data;
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    async function getHotelData() {
+      try {
+        let response = await fetch('http://localhost:9000/products', {
+          method: 'GET',
+          headers: {
+            "Access-Control-Allow-Origin":"*",
+            "Content-Type":"application/json"
+          }
+        })
+        const json = await response.json()
+        const data = json.data
+        console.log(data)
+        } catch(error) {
+            console.log(error)
+        }
+
+      // let temp = localStorage.getItem("hotelData")
+      // if (temp != null) {
+      //   hotelData = JSON.parse(temp)
+      // }
+      // else {
+      //   let data_url = "localhost:9000/product"
+      //   hotelData = await fetchData(dataURL)
+      //   localStorage.setItem("hotelData", JSON.stringify(hotelData))
+      // }
+    }
+
+    function search() {
+      
+    }
+    
+
+    function displaySearchResult() {
+    } 
+
+    function bookClicked(roomId) {
+    }
+
+    function generalize_util() {
+      // let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+      // let selected = []
+      // let total = checkboxes.length
+      // for (let i = 0; i < total; i++) {
+      //         selected.push(checkboxes[i].value)
+      // }
+      // return selected
+    }
+
+
+    async function main() {
+      await getHotelData()
+
+    } 
+
+    main()
+  </script>
+</body>
