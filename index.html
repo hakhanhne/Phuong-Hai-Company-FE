@@ -45,9 +45,7 @@
       font-size: 13px;
     }
     
-    body {
-      margin: 0px;
-    }
+    body {margin: 0px;}
     
     header {
       background-color: rgb(163, 69, 69);
@@ -55,9 +53,7 @@
       padding: 10px 25px 10px 25px;
     }
 
-    header * {
-      color: white;
-    }
+    header * {color: white;}
 
     .header-title {
       font-family: 'Merienda';
@@ -87,27 +83,23 @@
       gap: 15px;
     }
 
-    .space-between {
-      justify-content: space-between;
-    }
+    .space-between {justify-content: space-between;}
 
-    .space-around {
-      justify-content: space-around;
-    }
+    .space-around {justify-content: space-around;}
 
-    .justify-left {
-      justify-content: left;
-    }
+    .justify-left {justify-content: left;}
+    .justify-center {justify-content: center;}
+
 
     .align-center {align-items: center;}
 
-    #search-area{
+    #search-box{
       background-color: #febb02;
       padding: 20px;
       height: fit-content;
     }
 
-    #search-area-content {gap: 18px;}
+    #search-box-content {gap: 18px;}
 
     .label-input {
       display: flex;
@@ -123,87 +115,29 @@
       height: fit-content;
     }
 
-    .btn:hover{
-      cursor: pointer;
-    }
+    .btn:hover{cursor: pointer;}
 
-    .btn:active{
-      opacity: 85%;
-    }
+    .btn:active{opacity: 85%;}
 
     .btn-white-text {
       border-color: white;
       color: white;
     }
 
-    .btn-transparent{
-      background-color: transparent;
-    }
+    .btn-transparent{background-color: transparent;}
 
     .btn-red {
       background-color: rgb(163, 69, 69);
       color: white;
     }
 
-    .table-w-border, .table-w-border tr, .table-w-border td, .table-w-border th {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
+    .text-center {text-align: center;}
 
-    .table-no-border, .table-no-border tr, .table-no-border td, .table-no-border th {
-      border: none;
-    }
+    #left {width: 25%;}
 
-    th {text-align: center;}
-
-    th, td {padding: 5px 3px;}
-
-    .text-center {
-      text-align: center;
-    }
-
-    #left-col {
-      width: 25%;
-    }
-
-    #right-col {
-      height: 500px;
-      max-width: 70%;
-    }
-
-    .section-colored {
-      background-color: rgb(248, 223, 223);
-      padding: 20px;
-    }
-
-    #table-rule td:first-child {
-      font-weight: 600;
-    }
-
-    #table-result td:first-child {
-     max-width: fit-content;
-     text-align: left;
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     border: none;
-    }
-
-    #table-rule {
-      border-spacing: 10px 15px;
-    }
+    #right {max-width: 70%; gap: 30px;}
 
     .bold{font-weight: 600;}
-
-    .util-title{
-      font-weight: 600;
-      gap: 5px;
-      align-items: center;
-    }
-
-    .util-col {gap: 20px;}
-
-    .util-col div {gap: 7px;}
 
     img:hover{opacity: .7;}
 
@@ -213,11 +147,7 @@
       color: white;
     }
 
-    #table-result td{text-align: center;}
-
-    .util.flex-row, #utility-content {
-      flex-wrap: wrap;
-    }
+    #table-product td{text-align: center;}
 
     .rounded-border{
       border-radius: 5px;
@@ -234,13 +164,9 @@
       flex-direction: row;
     }
 
-    table {
-      overflow-x: auto;
-    }
-    
-    .matched-util {color: rgb(219, 24, 24);}
+    table {overflow-x: auto;}
 
-    #btn-select-util {
+    #btn-select-category {
       border: 1px solid;
       font-size: inherit;
       background-color: white;
@@ -248,16 +174,78 @@
       border-color: rgb(133, 133, 133);
     }
 
-    .originalPrice {
-      text-decoration: line-through;
+    .product-content {gap:5px}
+
+    .grid-product {
+      display: grid;
+      grid-template-columns: repeat(3, calc(33.33% - (20px * 2 / 3)));
+      grid-gap: 20px;
     }
 
-    #result-content {gap:5px}
+    .product-card {
+        position: relative;
+        padding: 9px;
+        border: 1px solid #007cc2;
+        padding-bottom: 0px;
+        box-shadow: 3px 3px 3px 3px #dbdbdb;
+    }
 
-    .room-name {font-size:15px;}
+    .w100 {width: 100%;}
+
+    .product-name {font-size: medium; font-weight: 600;}
+
+    .btn-add-cart {padding-top: 3px; min-width: 45px;}
+
+    .active{color: #007cc2; font-weight: bold;}
+
+    .pagination {gap: 5px;}
+
+    .categoryid{font-weight: bold;}
+
+    .ul_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        border: 1px solid #eee;
+        padding: 0px 10px;
+    }
+
+    .ul_list li {
+        position: relative;
+    }
+
+    .ul_list > li > div {
+        padding-right: 20px;
+    }
+
+    .ul_list li div {
+        display: block;
+        color: #000;
+        text-transform: uppercase;
+        padding: 5px 0px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .ul_list li .arrow_list {
+        right: 0px;
+        z-index: 999;
+        position: absolute;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .ul_list li ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-left: 10px;
+        display: none;
+    }
+    
+    input.quantity {width: 40px;}
     @media screen and (max-width: 40em) { 
       body * {font-size: 12px;}
-      .room-name {font-size:14px;}
       .title {font-size: 25px;}
       .subtitle {font-size: 20px;}
       .header-title {font-size: 17px;}
@@ -269,18 +257,16 @@
         gap: 7px
       }
 
-      #left-col, #right-col {
+      #left, #right {
         width:100%;
         max-width:100%
       }
-      
-      #utility-content {
-        justify-content: left;
-      }
+
+      .btn-add-cart {min-width:auto;}
+      .product-name {font-size:13px; font-weight: 500;}
+      input.quantity {min-width: 10px;}
+
     }
-    
-    
-    
   </style>
 
 </head>
@@ -288,30 +274,21 @@
   <header></header>
   <main class="flex-col main-body">
     <section id="section-explore">
-      <div class="title">Explore</div>
+      <div class="title page-title">Explore Product</div>
       <div class="space-between" id="explore-content">
-        <div class="flex-col" id="left-col">
-          <div class="rounded-border" id="search-area">
-            <div class="flex-col" id="search-area-content">
+        <div class="flex-col" id="left">
+          <div class="rounded-border" id="search-box">
+            <div class="flex-col" id="search-box-content">
               <div  class="bold subtitle" >Search</div>
               <div class="flex-col" id="search-form">
                 <div class="label-input">
-                  <input type="text" id="search-keyword" name="search-by-keyword"/>
-                </div>
-                <div class="label-input">
-                  <label for="">Catogory</label>
-                  <select class="input_box" id="" name="">
-                      <option value="">All</option>
-                      <option id="single" value="single">Single</option>
-                      <option id="double" value="double">Double</option>
-                      <option id="family" value="family">Family</option>
-                      <option id="villa" value="villa">Villa</option>
-                  </select>
+                  <input type="text" id="search-content" name="search-content" placeholder="Search product name"/>
                 </div>
 
                 <div class="label-input">
-                  <label>Utilities</label>
-                  <button type="button" class="btn" id="btn-select-util" data-bs-toggle="modal" data-bs-target="#modal-select-util" >Select utilities</button>
+                  <label>Category</label>
+                  <ul class="ul_list" id="category-content"></ul>
+                  <!-- <button type="button" class="btn" id="btn-select-category" data-bs-toggle="modal" data-bs-target="#modal-select-category" >Select category</button> -->
                 </div>
               </div>
 
@@ -321,36 +298,46 @@
           </div>
         </div>
 
-        <div class="flex-col" id="right-col">
+        <div class="flex-col align-center" id="right">
+            <div class="grid-product w100" id="product-display"></div>
+            <div class="pagination flex_row" id="pagination"></div>
         </div>
       </div>
-
-      <section id="section-result" class="flex-col" style="display: none;">
-        <div class="title">Search Result</div>
-        <div class="flex-col" id="result-content">
-        </div>
-      </section>
-    </section>
-
-    <section id="section-utility" class="flex-col">
-      <div class="title">Utilities</div>
-      <div class="section-colored rounded-border flex-row space-around" id="utility-content">
-      </div>
-    </section>
 
   </main>
 
-  <div class="modal fade" id="modal-select-util" tabindex="-1" aria-labelledby="modal_select_util_label" aria-hidden="true">
+  <div class="modal fade" id="modal-select-category" tabindex="-1" aria-labelledby="modal_select_cate_label" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modal_select_util_label">Select Utilities</h5>
+          <h5 class="modal-title" id="modal_select_cate_label">Select Category</h5>
           <button type="button" class="close btn btn-outline-dark btn-sm" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body" style="gap: 1.5rem;">
-            <div id="utilities-select"></div>
+            <div id="select-category-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-product-detail" tabindex="-1" aria-labelledby="modal-product-detail" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Product Detail</h5>
+          <button type="button" class="close btn btn-outline-dark btn-sm" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="gap: 1.5rem;">
+          <div id="product-detail-content">
+            <img id="modal-product-photo"></img>
+            <div style="font-size: 20px;" class="bold" id="modal-product-name"></div>
+            <div id="modal-product-description"></div>
+            <button class="btn-add-cart modal"><i class="fa-solid fa-cart-shopping" style="font-size: 1.3em;"></i></button>
+          </div>
         </div>
       </div>
     </div>
@@ -364,88 +351,222 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script type="text/javascript" src="signinState.js"></script>
   <script>
-    let hotelData = null
-    let selected_util = null
-    let room_result = null
-    let days = 0
-    let dataVer = -1
-    const product_area = document.querySelector("#right-col")
+    let current_page = 0;
+    let total_pages = 0;
+    let categoryId = -1;
+    let subcategoryId = -1;
+    let pageResponse = null
+    const categoryMap = new Map();
     const btn_search = document.querySelector("#btn-search")
+    const category_content = document.querySelector("#category-content")
     const search_msg = document.querySelector("#search-msg")
-    const section_result = document.querySelector("#section-result")
-    const result_content = document.querySelector("#result-content")
+    const product_display = document.querySelector("#product-display")
+    const pagination = document.querySelector("#pagination")
     const btn_admin = document.querySelector("#btn-admin")
     const address = document.querySelector("#address")
+    const search_content = document.querySelector("#search-content")
+    const modal_product_photo = document.querySelector("#modal-product-photo")
+    const modal_product_name = document.querySelector("#modal-product-name")
+    const modal_product_description = document.querySelector("#modal-product-description")
+    const modal_btn_add_cart = document.querySelector(".btn-add-cart.modal")
 
 
     btn_search.addEventListener("click", () => {
-
-      displaySearchResult()
+      search()
     })
 
+    function search() {
+      displayPage()
+    }
 
-    async function fetchData(url) {
-      try {
-        let res = await fetch(url);
-        const data = await res.json();
-        return data;
-      } catch (error) {
-        console.error(error)
+          //reset modal form after close
+    $("#modal-product-detail").on('hidden.bs.modal', function () {
+      modal_product_name.innerHTML = ""
+      modal_product_description.innerHTML = ""
+      $(this).find('#product-detail-content').trigger('reset');
+    });
+
+    async function productClicked(productId) {
+      let product = await fetchData(`http://localhost:9000/product?id=${productId}`)
+      if (product.description=="" || product.description==null) product.description = "No description"
+      modal_product_photo.src = product.photo
+      modal_product_name.innerHTML = product.name
+      modal_product_description.innerHTML = product.description
+      // modal_btn_add_cart.addEventListener('click', addCartClicked(product))
+    }
+
+    function createCard(product) {
+      if(product.photo == null || product.photo == "") product.photo="media/default-product-image.jpg"
+      if (product.description == null) product.description=""
+      let html = 
+      `
+      <div class="product-card">
+        <div onclick="productClicked(${product.id})" data-bs-toggle="modal" data-bs-target="#modal-product-detail">
+          <img src="${product.photo}" class="w100">
+        </div>
+        <div class="product-content flex-col">
+          <center class="product-name">${product.name}</center>
+          <div class="product-description">${product.description}<div>
+          <div class="flex-row justify-center">
+            <input class="quantity" type="number" id="quantity${product.id}" value="1" min=1>
+            <button class='btn-add-cart'onclick="addCartClicked(${product.id})""><i class="fa-solid fa-cart-shopping" style="font-size: 1.3em;"></i></button>
+          </div>
+        </div>
+      </div>
+      `
+      return html
+    }
+
+    function displayProductCards(productList) {
+      product_display.innerHTML = ``
+      if (productList == null) {
+        product_display.innerHTML = `No products found`
+        return
+      }
+      if (productList.length==0) {product_display.innerHTML = `No products found` }
+      else {
+        for (let i=0; i<productList.length; i++) {
+          product_display.innerHTML += createCard(productList[i])
+        }
       }
     }
 
-    async function getHotelData() {
+    async function fetchData(url) {
       try {
-        let response = await fetch('http://localhost:9000/products', {
+        let res = await fetch(url, {
           method: 'GET',
           headers: {
             "Access-Control-Allow-Origin":"*",
             "Content-Type":"application/json"
           }
         })
-        const json = await response.json()
+        const json = await res.json();
         const data = json.data
-        console.log(data)
-        } catch(error) {
-            console.log(error)
+        return data;
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    function addCartClicked(productId) {
+      let quantity = document.querySelector(`#quantity${productId}`).value;
+      if (quantity==null || quantity=="" || quantity <= 0) {
+        alert("Please enter valid quantity")
+        return;
+      }
+      let temp = JSON.parse(localStorage.getItem('cart'))
+      if (temp != null) {
+        const cartMap = new Map(Object.entries(temp));
+        cartMap.set(productId, quantity)
+        localStorage.setItem('cart', JSON.stringify(Object.fromEntries(cartMap)))
+      }
+      else {
+        const cartMap = new Map()
+        cartMap.set(productId, quantity)
+        localStorage.setItem('cart', JSON.stringify(Object.fromEntries(cartMap)))
+      }
+      console.log(localStorage.getItem('cart'))
+      alert('Added item to cart')
+    }
+
+    function setupPagination(total_pages) {
+      pagination.innerHTML = "";
+      for (let i = 0; i < total_pages; i++) {
+        let btn = createPaginationBtn(i);
+        pagination.appendChild(btn);
+      }
+    }
+
+    function createPaginationBtn(pageNo) {
+      let button = document.createElement("button");
+      button.classList.add("pagination-btn");
+      button.innerText = pageNo + 1;
+
+      if (current_page == pageNo) button.classList.add("active");
+      button.addEventListener("click", function () {
+        let prev_active = document.querySelector(".pagination-btn button.active");
+        if (prev_active != null) prev_active.classList.remove("active");
+        current_page = button.innerText - 1;
+        displayPage()
+        button.classList.add("active");
+      });
+      return button;
+    }
+
+    async function displayPage() {
+      if(categoryId.value == null) categoryId.value=-1
+      if(subcategoryId.value == null) subcategoryId.value=-1
+      if(current_page == null) current_page=0
+      let searchUrl = 
+      `http://localhost:9000/products?` +
+      `name=${search_content.value}` +
+      `&categoryId=${categoryId}` +
+      `&subcategoryId=${subcategoryId}` +
+      `&pageNo=${current_page}`
+
+      const pageResponse = await fetchData(searchUrl)
+      console.log(pageResponse)
+      setupPagination(pageResponse.totalPage)
+      displayProductCards(pageResponse.data)
+    }
+
+    async function getCategory() {
+      if (categoryMap.size == 0 || localStorage.getItem('category') == null || localStorage.getItem('needRefreshCatogory') != 0) {
+        let categories = await fetchData("http://localhost:9000/categories")
+        for(let i=0; i<categories.length; i++) {
+          let subcategories = await fetchData("http://localhost:9000/subcategories?categoryId="+categories[i].id)
+          categoryMap.set(categories[i], subcategories);
         }
-
-      // let temp = localStorage.getItem("hotelData")
-      // if (temp != null) {
-      //   hotelData = JSON.parse(temp)
-      // }
-      // else {
-      //   let data_url = "localhost:9000/product"
-      //   hotelData = await fetchData(dataURL)
-      //   localStorage.setItem("hotelData", JSON.stringify(hotelData))
-      // }
+        localStorage.setItem('category', JSON.stringify(Object.fromEntries(categoryMap)))
+        localStorage.setItem('needRefreshCatogory', 0)
+      }
+      else {
+        categoryMap = JSON.parse(localStorage.getItem('category'))
+      }
     }
 
-    function search() {
-      
+    async function displayCategory() {
+      await getCategory();
+      category_content.innerHTML = ""
+      for (let [key, value] of categoryMap) {
+        category_content.innerHTML += 
+        `
+        <li class="category">
+          <div onclick="categoryClicked(${key.id})" class="categoryid flex-row" id="${key.id}">
+            ${key.name}
+            <i onclick="displaySubcategory('#category${key.id}')" class="fa-solid fa-circle-right arrow_list" style="font-size: 1.15em;"></i>
+          </div>
+          <ul id="category${key.id}"></ul>
+        </li>
+        `
+        for (let i=0; i<value.length; i++) {
+          document.querySelector(`ul#category${key.id}`).innerHTML +=
+          `<li onclick="subcategoryClicked(${value[i].id})" id="${value[i].id}">${value[i].name}</li>`
+        }
+      }
     }
-    
 
-    function displaySearchResult() {
-    } 
-
-    function bookClicked(roomId) {
+    function displaySubcategory(category_id_html) {
+      let display_style = document.querySelector(category_id_html).style.display
+      display_style = (display_style == "none" || display_style == "x") ? "block" : "none"
+      document.querySelector(category_id_html).style.display = display_style
     }
 
-    function generalize_util() {
-      // let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-      // let selected = []
-      // let total = checkboxes.length
-      // for (let i = 0; i < total; i++) {
-      //         selected.push(checkboxes[i].value)
-      // }
-      // return selected
+    function categoryClicked(category_id) {
+      categoryId = category_id
+      subcategoryId = -1
+      search()
     }
 
+    function subcategoryClicked(subcategory_id) {
+      categoryId = -1
+      subcategoryId = subcategory_id
+      search()
+    }
 
     async function main() {
-      await getHotelData()
-
+      await displayPage()
+      await displayCategory()
     } 
 
     main()
